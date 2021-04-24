@@ -1,17 +1,6 @@
-<?php /*
-CREATE TABLE IF NOT EXISTS `wp_reportattacks_loginlog` (
-`id` int(11) NOT NULL AUTO_INCREMENT,
-`time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
-`ip` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-`user` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-`ua` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
-`url` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
-`referrer` text COLLATE utf8mb4_unicode_ci NOT NULL,
-`reported` varchar(3) COLLATE utf8mb4_unicode_ci NOT NULL,
-`flag` char(1) COLLATE utf8mb4_unicode_ci NOT NULL,
-UNIQUE KEY `id` (`id`)
-
-*/
+<?php 
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 class reportattacks_List_Table extends WP_List_Table
 {
 
@@ -102,12 +91,18 @@ class reportattacks_List_Table extends WP_List_Table
    
                 $current_table = $wpdb->prefix . 'reportattacks_loginlog';
 
+                $report_attacks_failedlogin =  $_GET['failedlogin'];
+
+                if (gettype($report_attacks_failedlogin) != 'array')
+                    $report_attacks_failedlogin = array($report_attacks_failedlogin);
+
                 
                 foreach ($_GET['failedlogin'] as $ip) {
-
             
                    $ctd++;
                    $wpdb->show_errors();
+                  
+                   $ip = sanitize_text_field($ip);
                   
                    $ip = trim($ip);
                    if (! is_numeric($ip))
@@ -142,8 +137,8 @@ class reportattacks_List_Table extends WP_List_Table
         global $wpdb;
         global $option;
 
-        $per_page = 15;
-
+        $per_page = get_site_option( 'reportattacks_per_page', 20 );
+ 
 
         $columns = $this->get_columns();
         $hidden = array();
@@ -160,13 +155,13 @@ class reportattacks_List_Table extends WP_List_Table
         $current_table = $wpdb->prefix . 'reportattacks_loginlog';
 
         if (isset($_GET['order']))
-            $order = $_GET['order'];
+            $order = sanitize_text_field($_GET['order']);
         else
             $order = 'asc';
 
 
         if (isset($_GET['orderby']))
-            $orderby = $_GET['orderby'];
+            $orderby = sanitize_text_field($_GET['orderby']);
         else
             $orderby = 'ip';
 
@@ -212,11 +207,11 @@ class reportattacks_List_Table extends WP_List_Table
     protected function usort_reorder($a, $b)
     {
         // If no sort, default to title.
-        $orderby = !empty($_REQUEST['orderby']) ? wp_unslash($_REQUEST['orderby']) :
+        $orderby = !empty($_REQUEST['orderby']) ? wp_unslash(sanitize_text_field($_REQUEST['orderby'])) :
             'ip'; // WPCS: Input var ok.
 
         // If no order, default to asc.
-        $order = !empty($_REQUEST['order']) ? wp_unslash($_REQUEST['order']) : 'asc'; // WPCS: Input var ok.
+        $order = !empty($_REQUEST['order']) ? wp_unslash(sanitize_text_field($_REQUEST['order'])) : 'asc'; // WPCS: Input var ok.
 
         // Determine sort order.
         $result = strcmp($a[$orderby], $b[$orderby]);

@@ -1,6 +1,8 @@
 <?php 
-
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 add_action('admin_menu', 'reportattacks_add_admin_menu');
+
 
 
 function reportattacks_add_admin_menu() {
@@ -57,7 +59,7 @@ function goblocklist($username,$email)
                if (isset($ret['status']))
                  {
                        $status = $ret['status'];
-                       $r = strip_tags($status);
+                       $r = sanitize_text_field($status);
                        if($r != 'ok')
                        {
                            if (isset($ret['msgs']))
@@ -66,7 +68,7 @@ function goblocklist($username,$email)
                                if (isset($name['name']))
                                { 
                                    $error_name = $name['name'];
-                                   $error_msg = strip_tags($error_name); 
+                                   $error_msg = sanitize_text_field($error_name); 
                                    // A Registration with the Name is allready in process.
                                    //die(substr($error_msg,0,51 ) ); //  Send the Registration-Mail again.
                                    if(substr($error_msg,0,52 ) == 'A Registration with the Name is allready in process.')
@@ -201,48 +203,48 @@ function reportattacks_options_page()
    
     ?>
 	
-    <form action='<?php echo $_SERVER['PHP_SELF'];?>?page=reportattacks_getapi' method='post'>
+    <form action='<?php echo esc_url($_SERVER['PHP_SELF']);?>?page=reportattacks_getapi' method='post'>
 
         <h1>Report Attacks</h1>
         <h4>
-        <? echo __('Fill Out this form to Get your free Blocklist API KEY', 'reportattacks'); ?>
+        <?php echo __('Fill Out this form to Get your free Blocklist API KEY', 'reportattacks'); ?>
         </h4>
          <em>
-         <? echo __('Request once, then check your eMail account for email from Blocklist.de', 'reportattacks'); ?>       
+         <?php echo __('Request once, then check your eMail account for email from Blocklist.de', 'reportattacks'); ?>       
          <br />
-         <? echo __('Check also your spam folder.', 'reportattacks'); ?>
+         <?php echo __('Check also your spam folder.', 'reportattacks'); ?>
         </em>
         <br /> <br /> 
         <hr />
         <br /> <br /> 
-        <? echo __('Blocklist User Name *', 'reportattacks'); ?>
-        :&nbsp;<input name="reportattacks_usernameblocklist" type="text" value="" placeholder="<? echo __('Type here your username', 'reportattacks'); ?>" size="20" />
+        <?php echo __('Blocklist User Name *', 'reportattacks'); ?>
+        :&nbsp;<input name="reportattacks_usernameblocklist" type="text" value="" placeholder="<?php echo __('Type here your username', 'reportattacks'); ?>" size="20" />
         <br />
         <em>
-        <? echo __('To create your user name, you can use only normal characters - A to Z - (also numbers and underscore) of the English alphabet.', 'reportattacks'); ?>.
+        <?php echo __('To create your user name, you can use only normal characters - A to Z - (also numbers and underscore) of the English alphabet.', 'reportattacks'); ?>.
         <br />
-        <? echo __('Min size 5 max 20', 'reportattacks'); ?>.
+        <?php echo __('Min size 5 max 20', 'reportattacks'); ?>.
         <!-- // (!preg_match("/^[a-zA-Zà-ýÀ-Ýß\-0-9\.,@_ ]{3,100}$/i", $_POST['name'])) -->
         
         </em>
         <br /><br />
-        <? echo __('Your eMail *', 'reportattacks'); ?>
-        :&nbsp;<input name="reportattacks_emailblocklist" type="text" value="" placeholder="<? echo __('Type here your email', 'reportattacks'); ?>" size="50" />
+        <?php echo __('Your eMail *', 'reportattacks'); ?>
+        :&nbsp;<input name="reportattacks_emailblocklist" type="text" value="" placeholder="<?php echo __('Type here your email', 'reportattacks'); ?>" size="50" />
         
         <br />
         <em>
-        <? echo __('Valid email address where you will receive your API KEY from Blocklist.de', 'reportattacks'); ?>.
+        <?php echo __('Valid email address where you will receive your API KEY from Blocklist.de', 'reportattacks'); ?>.
         </em>
         <br />
         <br />
         <input type="checkbox" name="reportattacks_blocklistterms" />
         <em> *
-        <? echo __('I read and agree with the terms of service (below) of Blocklist.de', 'reportattacks'); ?>.
+        <?php echo __('I read and agree with the terms of service (below) of Blocklist.de', 'reportattacks'); ?>.
         </em>
         <br />
         <br />
                 <em> *
-        <? echo __('All 3 fields are required', 'reportattacks'); ?>.
+        <?php echo __('All 3 fields are required', 'reportattacks'); ?>.
         </em>
 
         <br />
@@ -257,7 +259,7 @@ function reportattacks_options_page()
         <br />
         <br />
        <em> 
-       <? echo __('You can also request your free API KEY at: https://www.blocklist.de/en/register.html', 'reportattacks'); ?>
+       <?php echo __('You can also request your free API KEY at: https://www.blocklist.de/en/register.html', 'reportattacks'); ?>
        </em>
        
         <br />

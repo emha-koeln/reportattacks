@@ -139,7 +139,7 @@ class OptionPageBuilder {
 	{
 
 		// echo reset form
-		echo '<form method="post" action="' . str_replace( '&settings-updated=true', '', $_SERVER["REQUEST_URI"] ) . '" class="reset-form">';
+		echo '<form method="post" action="' . str_replace( '&settings-updated=true', '', esc_url($_SERVER["REQUEST_URI"]) ) . '" class="reset-form">';
 
 		// Reset nonce
 		wp_nonce_field( 'pcs_reset_options', 'pcs_reset_options_nonce' );
@@ -257,7 +257,7 @@ class OptionPageBuilderTabbed extends OptionPageBuilder {
 	public function render()
 	{
 
-		$active_tab_id = (isset($_GET['tab'])) ? $_GET['tab'] : $this->tabs[0]->id;
+		$active_tab_id = (isset($_GET['tab'])) ? sanitize_text_field($_GET['tab']) : $this->tabs[0]->id;
 
 		do_action('pcs_render_option_page');
 
@@ -290,7 +290,8 @@ class OptionPageBuilderTabbed extends OptionPageBuilder {
 		settings_fields( $this->page->slug );
 		do_settings_sections( $this->page->slug );
 
-		submit_button();
+     if($active_tab_id <> 'startup_guide' )
+	 	submit_button();
 
 		echo '</form>';
 

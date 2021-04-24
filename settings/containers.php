@@ -67,7 +67,8 @@ class Page {
 	{
 		if(!$markup) {
 			$this->markup_top =  '<div class="wrap"><div id="icon-options-general" class="icon32"></div>';
-			$this->markup_top .= '<h2>' . $this->menu_title . '</h2>';
+		//	$this->markup_top .= '<h2>' . $this->menu_title . '</h2>';
+            $this->markup_top .=  '<img src="'.REPORTATTACKSURL.'images/logo.png" />';
  		} else {
  			$this->markup_top = $markup;
  		}
@@ -125,7 +126,7 @@ class Tab {
 	{
 		// Determine if this is the active tab
 		if(isset($_GET['tab'])) {
-			if($this->id == $_GET['tab']) {
+			if($this->id == sanitize_text_field($_GET['tab'])) {
 				$this->active = TRUE;
 			}
 		} else {
