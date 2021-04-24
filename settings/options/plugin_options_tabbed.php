@@ -33,7 +33,7 @@ $fields[] = array(
  $fields[] = array(
 	'type' 	=> 'radio',
 	'name' 	=> 'reportattacks_block_rep',
-	'label' => __("Hides all the site (included the login page) to reported IP's?", 'reportattacks'),
+	'label' => __("Hides all the site (included the login page) to reported IP's?", "ReportAttacks"),
 	'radio_options' => array(
 		array('value'=>'1', 'label' => __('yes', 'reportattacks')),
 		array('value'=>'0', 'label' => __('no', 'reportattacks'))

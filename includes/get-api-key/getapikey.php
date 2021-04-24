@@ -4,7 +4,6 @@ if (!defined('ABSPATH'))
 add_action('admin_menu', 'reportattacks_add_admin_menu');
 
 
-
 function reportattacks_add_admin_menu() {
     add_submenu_page(
         'report-attacks', // $parent_slug
