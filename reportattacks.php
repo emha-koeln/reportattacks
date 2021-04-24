@@ -64,7 +64,9 @@ if(is_admin())
     
       if (isset($_GET['page'])) {
         $page = sanitize_text_field($_GET['page']);
-        if ($page == 'report-attacks') 
+        if ($page == 'report-attacks' 
+            OR $page == 'reportattacks_getapi'
+            OR $page == 'ra_my-custom-submenu-page') 
         {
                   $path = dirname(plugin_basename( __FILE__ )) . '/language/';
                   $loaded = load_plugin_textdomain( 'reportattacks', false, $path);

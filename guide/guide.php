@@ -8,16 +8,16 @@ if (!defined('ABSPATH'))
 
 $reportattacks_help = '';
 $reportattacks_help .= '<h4>';
-$reportattacks_help .= '1)'. __("Open the Request API Key page (under Report Attacks Menu) and follow the instructions to get your free API KEY.", "reportattacks"); 
+$reportattacks_help .= '1) '. __("Open the Request API Key page (under Report Attacks Menu) and follow the instructions to get your free API KEY.", "reportattacks"); 
 
 
 $reportattacks_help .= '<br>';
 $reportattacks_help .= '<br>';
-$reportattacks_help .= '2)'.  __("After receive the Blocklist email with your API KEY, go to Blocklist Settings Tab and fill out your free API info. Check Yes to begin to report attacks. We can report attacks when the same IP attempt attacks you more than 5 times. ", "reportattacks"); 
+$reportattacks_help .= '2) '.  __("After receive the Blocklist email with your API KEY, go to Blocklist Settings Tab and fill out your free API info. Check Yes to begin to report attacks. We can report attacks when the same IP attempt attacks you more than 5 times. ", "reportattacks"); 
 
 $reportattacks_help .= '<br>';
 $reportattacks_help .= '<br>';
-$reportattacks_help .= '3)'.  __("Open the Plugin General Settings Tab and click over Yes  (to begin to record failed login attempts).", "reportattacks"); 
+$reportattacks_help .= '3) '.  __("Open the Plugin General Settings Tab and click over Yes  (to begin to record failed login attempts).", "reportattacks"); 
 $reportattacks_help .= '<br>';
 $reportattacks_help .=  __("We suggest check Yes for all.", "reportattacks"); 
 $reportattacks_help .= '<br>';
@@ -27,19 +27,19 @@ $reportattacks_help .=  __("For more details, please, visit our FAQ page).", "re
 $reportattacks_help .= '<br>';
 $reportattacks_help .= '<br>';
 
-$reportattacks_help .= '4)'. __("Important: Add your's  IP address to MY IP White List.", "reportattacks"); 
+$reportattacks_help .= '4) '. __("Important: Add your's  IP address to MY IP White List.", "reportattacks"); 
 
 
 
 $reportattacks_help .= '<br>';
 $reportattacks_help .= '<br>';
 
-$reportattacks_help .=  __("5) At eMail Settings tab, you can customize your contact email or left blank to use your wordpress eMail.", "reportattacks"); 
+$reportattacks_help .=  '5) '. __("At eMail Settings tab, you can customize your contact email or left blank to use your wordpress eMail.", "reportattacks"); 
 
 $reportattacks_help .= '<br>';
 $reportattacks_help .= '<br>';
 
-$reportattacks_help .=  __("6) At Notification Settings Tab, you can record your option by receive or not email alerts about failed logins and Firewall Blocks.", "reportattacks"); 
+$reportattacks_help .=  '6) '. __("At Notification Settings Tab, you can record your option by receive or not email alerts about failed logins and Firewall Blocks.", "reportattacks"); 
 
 $reportattacks_help .= '<br>';
 $reportattacks_help .= '<br>';

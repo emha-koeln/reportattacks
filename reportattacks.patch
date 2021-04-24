@@ -1,0 +1,93 @@
+Index: guide/guide.php
+===================================================================
+--- guide/guide.php	(revision 7)
++++ guide/guide.php	(working copy)
+@@ -8,16 +8,16 @@
+ 
+ $reportattacks_help = '';
+ $reportattacks_help .= '<h4>';
+-$reportattacks_help .= '1)'. __("Open the Request API Key page (under Report Attacks Menu) and follow the instructions to get your free API KEY.", "reportattacks"); 
++$reportattacks_help .= '1) '. __("Open the Request API Key page (under Report Attacks Menu) and follow the instructions to get your free API KEY.", "reportattacks"); 
+ 
+ 
+ $reportattacks_help .= '<br>';
+ $reportattacks_help .= '<br>';
+-$reportattacks_help .= '2)'.  __("After receive the Blocklist email with your API KEY, go to Blocklist Settings Tab and fill out your free API info. Check Yes to begin to report attacks. We can report attacks when the same IP attempt attacks you more than 5 times. ", "reportattacks"); 
++$reportattacks_help .= '2) '.  __("After receive the Blocklist email with your API KEY, go to Blocklist Settings Tab and fill out your free API info. Check Yes to begin to report attacks. We can report attacks when the same IP attempt attacks you more than 5 times. ", "reportattacks"); 
+ 
+ $reportattacks_help .= '<br>';
+ $reportattacks_help .= '<br>';
+-$reportattacks_help .= '3)'.  __("Open the Plugin General Settings Tab and click over Yes  (to begin to record failed login attempts).", "reportattacks"); 
++$reportattacks_help .= '3) '.  __("Open the Plugin General Settings Tab and click over Yes  (to begin to record failed login attempts).", "reportattacks"); 
+ $reportattacks_help .= '<br>';
+ $reportattacks_help .=  __("We suggest check Yes for all.", "reportattacks"); 
+ $reportattacks_help .= '<br>';
+@@ -27,19 +27,19 @@
+ $reportattacks_help .= '<br>';
+ $reportattacks_help .= '<br>';
+ 
+-$reportattacks_help .= '4)'. __("Important: Add your's  IP address to MY IP White List.", "reportattacks"); 
++$reportattacks_help .= '4) '. __("Important: Add your's  IP address to MY IP White List.", "reportattacks"); 
+ 
+ 
+ 
+ $reportattacks_help .= '<br>';
+ $reportattacks_help .= '<br>';
+ 
+-$reportattacks_help .=  __("5) At eMail Settings tab, you can customize your contact email or left blank to use your wordpress eMail.", "reportattacks"); 
++$reportattacks_help .=  '5) '. __("At eMail Settings tab, you can customize your contact email or left blank to use your wordpress eMail.", "reportattacks"); 
+ 
+ $reportattacks_help .= '<br>';
+ $reportattacks_help .= '<br>';
+ 
+-$reportattacks_help .=  __("6) At Notification Settings Tab, you can record your option by receive or not email alerts about failed logins and Firewall Blocks.", "reportattacks"); 
++$reportattacks_help .=  '6) '. __("At Notification Settings Tab, you can record your option by receive or not email alerts about failed logins and Firewall Blocks.", "reportattacks"); 
+ 
+ $reportattacks_help .= '<br>';
+ $reportattacks_help .= '<br>';
+Index: reportattacks.php
+===================================================================
+--- reportattacks.php	(revision 7)
++++ reportattacks.php	(working copy)
+@@ -64,7 +64,9 @@
+     
+       if (isset($_GET['page'])) {
+         $page = sanitize_text_field($_GET['page']);
+-        if ($page == 'report-attacks') 
++        if ($page == 'report-attacks' 
++            OR $page == 'reportattacks_getapi'
++            OR $page == 'ra_my-custom-submenu-page') 
+         {
+                   $path = dirname(plugin_basename( __FILE__ )) . '/language/';
+                   $loaded = load_plugin_textdomain( 'reportattacks', false, $path);
+Index: settings/options/plugin_options_tabbed.php
+===================================================================
+--- settings/options/plugin_options_tabbed.php	(revision 8)
++++ settings/options/plugin_options_tabbed.php	(working copy)
+@@ -33,7 +33,7 @@
+  $fields[] = array(
+ 	'type' 	=> 'radio',
+ 	'name' 	=> 'reportattacks_block_rep',
+-	'label' => __("Hides all the site (included the login page) to reported IP's?", "ReportAttacks"),
++	'label' => __("Hides all the site (included the login page) to reported IP's?", "reportattacks"),
+ 	'radio_options' => array(
+ 		array('value'=>'1', 'label' => __('yes', 'reportattacks')),
+ 		array('value'=>'0', 'label' => __('no', 'reportattacks'))
+@@ -42,7 +42,7 @@
+ $fields[] = array(
+ 	'type' 	=> 'radio',
+ 	'name' 	=> 'reportattacks_radio_xml_rpc',
+-	'label' => 'Disable xml-rpc API. Take a look our faq page (at our site) for details.',
++    'label' => __('Disable xml-rpc API. Take a look our faq page (at our site) for details.', "reportattacks"),
+ 	'radio_options' => array(
+ 		array('value'=>'Yes', 'label' => __('Yes, disable All', 'reportattacks')),
+   		array('value'=>'Pingback', 'label' => __('Yes, disable only Ping Back', 'reportattacks' )),
+@@ -165,7 +165,7 @@
+ $fields[] = array(
+ 	'type' 	=> 'radio',
+ 	'name' 	=> 'reportattacks_all_failed_logins',
+-	'label' => 'Alert me by email each Failed Login',
++    'label' => __('Alert me by email each Failed Login', 'reportattacks'),
+ 	'radio_options' => array(
+ 		array('value'=>'1', 'label' => __('Yes.', 'reportattacks')),
+ 		array('value'=>'0', 'label' => __('No.', 'reportattacks')),
