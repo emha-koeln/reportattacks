@@ -2,15 +2,15 @@
 $mypage = new Page('Report Attacks', array('type' => 'menu'));
 $settings = array();
 require_once (REPORTATTACKSPATH. "guide/guide.php");
-$settings['Startup Guide']['Startup Guide'] = array('info' => $reportattacks_help );
+$settings[__('Startup Guide', 'reportattacks')][__('Startup Guide', 'reportattacks')] = array('info' => $reportattacks_help );
 $fields = array();   
-$settings['Startup Guide']['Startup Guide']['fields'] = $fields;
+$settings[__('Startup Guide', 'reportattacks')][__('Startup Guide', 'reportattacks')]['fields'] = $fields;
 $msg2 = '<big>';
 $msg2 .= __('You need only check yes or no below.','reportattacks');
 $msg2 .= '<br />';
 $msg2 .= __('Then click SAVE CHANGES.', 'reportattacks');
 $msg2 .= '</big>'; 
-$settings['General Settings'][__('Instructions', 'reportattacks')] = array('info' => $msg2);
+$settings[__('General Settings', 'reportattacks')][__('Instructions', 'reportattacks')] = array('info' => $msg2);
 $fields = array();
 $fields[] = array(
 	'type' 	=> 'radio',
@@ -124,7 +124,7 @@ $fields[] = array(
     
     
     
-$settings['General Settings']['']['fields'] = $fields;
+$settings[__('General Settings', 'reportattacks')]['']['fields'] = $fields;
 $myip = reportattacks_findip2(); 
 $msg2 = __('Add your current ip to your whitelist, then click SAVE CHANGES.', "reportattacks");
 $msg2 .= '<br />';
@@ -134,33 +134,33 @@ $msg2 .=  '<b>';
 $msg2 .=  __('Your current ip is: ', "reportattacks" );
 $msg2 .= $myip;
 $msg2 .=  '</b>';
-$settings['My IP White List'][__('Customized whitelist', 'reportattacks')] = array('info' => $msg2);
+$settings[__('My IP White List', 'reportattacks')][__('Customized whitelist', 'reportattacks')] = array('info' => $msg2);
 $fields = array();   
 $fields[] = array(
 	'type' 	=> 'textarea',
 	'name' 	=> 'reportattacks_whitelist',
 	'label' => __('My IP White List', 'reportattacks')
 	);
-$settings['My IP White List']['']['fields'] = $fields;
+$settings[__('My IP White List', 'reportattacks')]['']['fields'] = $fields;
 $reportattacks_admin_email = get_option( 'admin_email' ); 
 $msg_email = __('Fill out the email address to send messages. Left Blank to use your default Wordpress email.', 'reportattacks');
 $msg_email .= '<br /> (';
 $msg_email .= $reportattacks_admin_email ;
 $msg_email .= ')<br />';
 $msg_email .= __('Then, click save changes.', 'reportattacks');
-$settings['Email Settings']['email'] = array('info' => $msg_email );
+$settings[__('Email Settings', 'reportattacks')][__('email', 'reportattacks')] = array('info' => $msg_email );
 $fields = array();
 $fields[] = array(
 	'type' 	=> 'text',
 	'name' 	=> 'reportattacks_my_email',
-	'label' => 'email'
+    'label' => __('email', 'reportattacks')
 	);
-$settings['Email Settings']['email']['fields'] = $fields;
+$settings[__('Email Settings', 'reportattacks')][__('email', 'reportattacks')]['fields'] = $fields;
 $notificatin_msg = __('Do you want receive email alerts for each login attempt?', 'reportattacks');
 $notificatin_msg .= '<br /><strong>';
 $notificatin_msg .= __('If you under bruteforce attack, you will receive a lot of emails.', 'reportattacks');
 $notificatin_msg .= '</strong>';
-$settings['Notifications Settings']['Notifications'] = array('info' => $notificatin_msg );
+$settings[__('Notifications Settings', 'reportattacks')][__('Notifications', 'reportattacks')] = array('info' => $notificatin_msg );
 $fields = array();
 $fields[] = array(
 	'type' 	=> 'radio',
@@ -193,10 +193,10 @@ $fields[] = array(
 	);   
     
     
-$settings['Notifications Settings']['email']['fields'] = $fields;
-$settings['Blocklist Settings'][__('Blocklist Instructions', 'reportattacks')]['fields'] = $fields;
+$settings[__('Notifications Settings', 'reportattacks')][__('email', 'reportattacks')]['fields'] = $fields;
+$settings[__('Blocklist Settings', 'reportattacks')][__('Blocklist Instructions', 'reportattacks')]['fields'] = $fields;
 $blocklist_msg = __('To get your free Blocklist API Key, go to Request API Key page under the Repport Attacks menu and follow the instructions there.', 'reportattacks');
-$settings['Blocklist Settings'][__('Blocklist Instructions', 'reportattacks')] = array('info' => $blocklist_msg );
+$settings[__('Blocklist Settings', 'reportattacks')][__('Blocklist Instructions', 'reportattacks')] = array('info' => $blocklist_msg );
 $fields = array();
 $fields[] = array(
 	'type' 	=> 'text',
@@ -223,7 +223,7 @@ $fields[] = array(
     
     
     
-$settings['Blocklist Settings']['Blocklist Settings and Notifications']['fields'] = $fields;
+$settings[__('Blocklist Settings', 'reportattacks')][__('Blocklist Settings and Notifications', 'reportattacks')]['fields'] = $fields;
 new OptionPageBuilderTabbed($mypage, $settings);
 function reportattacks_findip2()
 {

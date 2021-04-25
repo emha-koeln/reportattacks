@@ -7,8 +7,8 @@ add_action('admin_menu', 'reportattacks_add_admin_menu');
 function reportattacks_add_admin_menu() {
     add_submenu_page(
         'report-attacks', // $parent_slug
-        'Request API Key', // string $page_title
-        'Request API Key', // string $menu_title
+        __('Request API Key', 'reportattacks'), // string $page_title
+        __('Request API Key', 'reportattacks'), // string $menu_title
         'manage_options', // string $capability
         'reportattacks_getapi',
         'reportattacks_options_page' );
@@ -149,7 +149,7 @@ if (isset($_POST['get_api'])) {
     }
 
 
-   if (!preg_match("/^[a-zA-Zà-ýÀ-Ýß\-0-9\.,@_ ]{3,100}$/i", $reportattacks_usernameblocklist))
+   if (!preg_match("/^[a-zA-Zï¿½-ï¿½ï¿½-ï¿½ï¿½\-0-9\.,@_ ]{3,100}$/i", $reportattacks_usernameblocklist))
     {
         reportattacks_failMsg( __('Invalid Username. You can use only normal characters - A to Z - (also numbers and underscore) of the English alphabet','reportattacks'));
         return;
@@ -223,7 +223,7 @@ function reportattacks_options_page()
         <?php echo __('To create your user name, you can use only normal characters - A to Z - (also numbers and underscore) of the English alphabet.', 'reportattacks'); ?>.
         <br />
         <?php echo __('Min size 5 max 20', 'reportattacks'); ?>.
-        <!-- // (!preg_match("/^[a-zA-Zà-ýÀ-Ýß\-0-9\.,@_ ]{3,100}$/i", $_POST['name'])) -->
+        <!-- // (!preg_match("/^[a-zA-Zï¿½-ï¿½ï¿½-ï¿½ï¿½\-0-9\.,@_ ]{3,100}$/i", $_POST['name'])) -->
         
         </em>
         <br /><br />

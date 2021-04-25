@@ -1,0 +1,150 @@
+Index: functions/functions.php
+===================================================================
+--- functions/functions.php	(revision 9)
++++ functions/functions.php	(working copy)
+@@ -199,8 +199,8 @@
+ function reportattacks_add_menu_items()
+ {
+     $reportattacks_table_page = add_submenu_page('report-attacks', // $parent_slug
+-        'Failed Logins Table', // string $page_title
+-        'Failed Logins Table', // string $menu_title
++        __('Failed Logins Table', 'reportattacks'), // string $page_title
++        __('Failed Logins Table', 'reportattacks'), // string $menu_title
+         'manage_options', // string $capability
+         'ra_my-custom-submenu-page', 'reportattacks_render_list_page');
+     add_action("load-$reportattacks_table_page", 'reportattacks_screen_options');
+Index: includes/get-api-key/getapikey.php
+===================================================================
+--- includes/get-api-key/getapikey.php	(revision 9)
++++ includes/get-api-key/getapikey.php	(working copy)
+@@ -7,8 +7,8 @@
+ function reportattacks_add_admin_menu() {
+     add_submenu_page(
+         'report-attacks', // $parent_slug
+-        'Request API Key', // string $page_title
+-        'Request API Key', // string $menu_title
++        __('Request API Key', 'reportattacks'), // string $page_title
++        __('Request API Key', 'reportattacks'), // string $menu_title
+         'manage_options', // string $capability
+         'reportattacks_getapi',
+         'reportattacks_options_page' );
+Index: reportattacks.php
+===================================================================
+--- reportattacks.php	(revision 9)
++++ reportattacks.php	(working copy)
+@@ -50,6 +50,9 @@
+ /* Begin Language */
+ if(is_admin())
+     {
++        $path = dirname(plugin_basename( __FILE__ )) . '/language/';
++        $loaded = load_plugin_textdomain( 'reportattacks', false, $path);
++        
+         function reportattacks_localization_init_fail()
+         {
+             echo '<div class="notice notice-warning is-dismissible">';
+@@ -68,8 +71,8 @@
+             OR $page == 'reportattacks_getapi'
+             OR $page == 'ra_my-custom-submenu-page') 
+         {
+-                  $path = dirname(plugin_basename( __FILE__ )) . '/language/';
+-                  $loaded = load_plugin_textdomain( 'reportattacks', false, $path);
++                  //$path = dirname(plugin_basename( __FILE__ )) . '/language/';
++                  //$loaded = load_plugin_textdomain( 'reportattacks', false, $path);
+                   if (!$loaded AND get_locale() <> 'en_US') { 
+                     
+                        if( function_exists('reportattacks_localization_init_fail'))
+Index: settings/options/plugin_options_tabbed.php
+===================================================================
+--- settings/options/plugin_options_tabbed.php	(revision 9)
++++ settings/options/plugin_options_tabbed.php	(working copy)
+@@ -2,15 +2,15 @@
+ $mypage = new Page('Report Attacks', array('type' => 'menu'));
+ $settings = array();
+ require_once (REPORTATTACKSPATH. "guide/guide.php");
+-$settings['Startup Guide']['Startup Guide'] = array('info' => $reportattacks_help );
++$settings[__('Startup Guide', 'reportattacks')][__('Startup Guide', 'reportattacks')] = array('info' => $reportattacks_help );
+ $fields = array();   
+-$settings['Startup Guide']['Startup Guide']['fields'] = $fields;
++$settings[__('Startup Guide', 'reportattacks')][__('Startup Guide', 'reportattacks')]['fields'] = $fields;
+ $msg2 = '<big>';
+ $msg2 .= __('You need only check yes or no below.','reportattacks');
+ $msg2 .= '<br />';
+ $msg2 .= __('Then click SAVE CHANGES.', 'reportattacks');
+ $msg2 .= '</big>'; 
+-$settings['General Settings'][__('Instructions', 'reportattacks')] = array('info' => $msg2);
++$settings[__('General Settings', 'reportattacks')][__('Instructions', 'reportattacks')] = array('info' => $msg2);
+ $fields = array();
+ $fields[] = array(
+ 	'type' 	=> 'radio',
+@@ -124,7 +124,7 @@
+     
+     
+     
+-$settings['General Settings']['']['fields'] = $fields;
++$settings[__('General Settings', 'reportattacks')]['']['fields'] = $fields;
+ $myip = reportattacks_findip2(); 
+ $msg2 = __('Add your current ip to your whitelist, then click SAVE CHANGES.', "reportattacks");
+ $msg2 .= '<br />';
+@@ -134,33 +134,33 @@
+ $msg2 .=  __('Your current ip is: ', "reportattacks" );
+ $msg2 .= $myip;
+ $msg2 .=  '</b>';
+-$settings['My IP White List'][__('Customized whitelist', 'reportattacks')] = array('info' => $msg2);
++$settings[__('My IP White List', 'reportattacks')][__('Customized whitelist', 'reportattacks')] = array('info' => $msg2);
+ $fields = array();   
+ $fields[] = array(
+ 	'type' 	=> 'textarea',
+ 	'name' 	=> 'reportattacks_whitelist',
+ 	'label' => __('My IP White List', 'reportattacks')
+ 	);
+-$settings['My IP White List']['']['fields'] = $fields;
++$settings[__('My IP White List', 'reportattacks')]['']['fields'] = $fields;
+ $reportattacks_admin_email = get_option( 'admin_email' ); 
+ $msg_email = __('Fill out the email address to send messages. Left Blank to use your default Wordpress email.', 'reportattacks');
+ $msg_email .= '<br /> (';
+ $msg_email .= $reportattacks_admin_email ;
+ $msg_email .= ')<br />';
+ $msg_email .= __('Then, click save changes.', 'reportattacks');
+-$settings['Email Settings']['email'] = array('info' => $msg_email );
++$settings[__('Email Settings', 'reportattacks')][__('email', 'reportattacks')] = array('info' => $msg_email );
+ $fields = array();
+ $fields[] = array(
+ 	'type' 	=> 'text',
+ 	'name' 	=> 'reportattacks_my_email',
+-	'label' => 'email'
++    'label' => __('email', 'reportattacks')
+ 	);
+-$settings['Email Settings']['email']['fields'] = $fields;
++$settings[__('Email Settings', 'reportattacks')][__('email', 'reportattacks')]['fields'] = $fields;
+ $notificatin_msg = __('Do you want receive email alerts for each login attempt?', 'reportattacks');
+ $notificatin_msg .= '<br /><strong>';
+ $notificatin_msg .= __('If you under bruteforce attack, you will receive a lot of emails.', 'reportattacks');
+ $notificatin_msg .= '</strong>';
+-$settings['Notifications Settings']['Notifications'] = array('info' => $notificatin_msg );
++$settings[__('Notifications Settings', 'reportattacks')][__('Notifications', 'reportattacks')] = array('info' => $notificatin_msg );
+ $fields = array();
+ $fields[] = array(
+ 	'type' 	=> 'radio',
+@@ -193,10 +193,10 @@
+ 	);   
+     
+     
+-$settings['Notifications Settings']['email']['fields'] = $fields;
+-$settings['Blocklist Settings'][__('Blocklist Instructions', 'reportattacks')]['fields'] = $fields;
++$settings[__('Notifications Settings', 'reportattacks')][__('email', 'reportattacks')]['fields'] = $fields;
++$settings[__('Blocklist Settings', 'reportattacks')][__('Blocklist Instructions', 'reportattacks')]['fields'] = $fields;
+ $blocklist_msg = __('To get your free Blocklist API Key, go to Request API Key page under the Repport Attacks menu and follow the instructions there.', 'reportattacks');
+-$settings['Blocklist Settings'][__('Blocklist Instructions', 'reportattacks')] = array('info' => $blocklist_msg );
++$settings[__('Blocklist Settings', 'reportattacks')][__('Blocklist Instructions', 'reportattacks')] = array('info' => $blocklist_msg );
+ $fields = array();
+ $fields[] = array(
+ 	'type' 	=> 'text',
+@@ -223,7 +223,7 @@
+     
+     
+     
+-$settings['Blocklist Settings']['Blocklist Settings and Notifications']['fields'] = $fields;
++$settings[__('Blocklist Settings', 'reportattacks')][__('Blocklist Settings and Notifications', 'reportattacks')]['fields'] = $fields;
+ new OptionPageBuilderTabbed($mypage, $settings);
+ function reportattacks_findip2()
+ {

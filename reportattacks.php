@@ -50,6 +50,9 @@ add_filter("plugin_action_links_$reportattacks_plugin", 'reportattacks_plugin_se
 /* Begin Language */
 if(is_admin())
     {
+        $path = dirname(plugin_basename( __FILE__ )) . '/language/';
+        $loaded = load_plugin_textdomain( 'reportattacks', false, $path);
+        
         function reportattacks_localization_init_fail()
         {
             echo '<div class="notice notice-warning is-dismissible">';
@@ -68,8 +71,8 @@ if(is_admin())
             OR $page == 'reportattacks_getapi'
             OR $page == 'ra_my-custom-submenu-page') 
         {
-                  $path = dirname(plugin_basename( __FILE__ )) . '/language/';
-                  $loaded = load_plugin_textdomain( 'reportattacks', false, $path);
+                  //$path = dirname(plugin_basename( __FILE__ )) . '/language/';
+                  //$loaded = load_plugin_textdomain( 'reportattacks', false, $path);
                   if (!$loaded AND get_locale() <> 'en_US') { 
                     
                        if( function_exists('reportattacks_localization_init_fail'))

@@ -199,8 +199,8 @@ function reportattacks_success_login($user_login)
 function reportattacks_add_menu_items()
 {
     $reportattacks_table_page = add_submenu_page('report-attacks', // $parent_slug
-        'Failed Logins Table', // string $page_title
-        'Failed Logins Table', // string $menu_title
+        __('Failed Logins Table', 'reportattacks'), // string $page_title
+        __('Failed Logins Table', 'reportattacks'), // string $menu_title
         'manage_options', // string $capability
         'ra_my-custom-submenu-page', 'reportattacks_render_list_page');
     add_action("load-$reportattacks_table_page", 'reportattacks_screen_options');
