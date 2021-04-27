@@ -1,10 +1,10 @@
 === WordPress Report Brute Force Attacks and Login Protection ReportAttacks Plugins ===
 Contributors: sminozzi
 Donate link: http://reportattacks.com/donate/
-Tags: login protection, abuse, fail2ban, brute force, firewall
+Tags: login protection, abuse, fail2ban, brute force, report attacks
 Requires at least: 4.0
 Tested up to: 5.7
-Stable tag: 2.23
+Stable tag: 2.24
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,6 +86,8 @@ http://reportattacks.com/contact/
 2. Default IP Black List
 
 == Changelog ==
+2.24 2021-04/27 - Improved Translation.
+
 2.23 2020-11-11 - Minor improvements.
 
 2.22 2020-11-11 - Minor improvements.
