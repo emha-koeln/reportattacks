@@ -3,7 +3,7 @@
 Plugin Name: reportattacks 
 Plugin URI: http://reportattacks.com
 Description: Report login brute force attacks and improve login security. Firewall Included.
-Version: 2.23
+Version: 2.24
 Text Domain: reportattacks
 Domain Path: /language
 Author: Bill Minozzi

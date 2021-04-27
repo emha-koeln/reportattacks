@@ -148,8 +148,9 @@ if (isset($_POST['get_api'])) {
         return;
     }
 
-
-   if (!preg_match("/^[a-zA-Z�-��-��\-0-9\.,@_ ]{3,100}$/i", $reportattacks_usernameblocklist))
+  // if(preg_match('/^[a-zA-Z0-9-_]+$/i', $str) == 1)
+ // if (!preg_match("/^[a-zA-Z�-��-��\-0-9\.,@_ ]{3,100}$/i", $reportattacks_usernameblocklist))
+   if  (!preg_match("/^[a-zA-Z0-9-_]+$/i", $reportattacks_usernameblocklist))
     {
         reportattacks_failMsg( __('Invalid Username. You can use only normal characters - A to Z - (also numbers and underscore) of the English alphabet','reportattacks'));
         return;

@@ -42,7 +42,7 @@ $fields[] = array(
 $fields[] = array(
 	'type' 	=> 'radio',
 	'name' 	=> 'reportattacks_radio_xml_rpc',
-    'label' => __('Disable xml-rpc API. Take a look our faq page (at our site) for details.', "reportattacks"),
+	'label' => __('Disable xml-rpc API. Take a look our faq page (at our site) for details.',"reportattacks"),
 	'radio_options' => array(
 		array('value'=>'Yes', 'label' => __('Yes, disable All', 'reportattacks')),
   		array('value'=>'Pingback', 'label' => __('Yes, disable only Ping Back', 'reportattacks' )),
@@ -165,7 +165,7 @@ $fields = array();
 $fields[] = array(
 	'type' 	=> 'radio',
 	'name' 	=> 'reportattacks_all_failed_logins',
-    'label' => __('Alert me by email each Failed Login', 'reportattacks'),
+	'label' => __('Alert me by email each Failed Login','reportattacks'),
 	'radio_options' => array(
 		array('value'=>'1', 'label' => __('Yes.', 'reportattacks')),
 		array('value'=>'0', 'label' => __('No.', 'reportattacks')),

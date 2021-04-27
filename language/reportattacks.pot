@@ -1,29 +1,62 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: reportattacks\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-25 10:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: ReportAttacks\n"
+"POT-Creation-Date: 2021-04-27 16:45+0100\n"
+"PO-Revision-Date: 2018-08-28 16:59-0000\n"
+"Last-Translator: Bill <sergiominozzi@gmail.com>\n"
+"Language-Team: Bill Minozzi <sergiominozzi@gmail.com>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1\n"
-"X-Domain: reportattacks"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_x;_nx;_e;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: includes/feedback/feedback-last.php:47
-msgid "(In this case, we are unable to email you)"
+#: functions/functions.php:71
+msgid "Alert: New Plugin was installed."
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:27
-msgid ""
-"Add extra login protection when ip is not withelisted? (Will request your "
-"WordPress email at login)"
+#: functions/functions.php:73
+msgid "New Plugin Name"
+msgstr ""
+
+#: functions/functions.php:75 functions/functions.php:181
+#: functions/functions.php:324 functions/functions.php:402
+#: functions/functions.php:680 functions/functions.php:703
+msgid "Date"
+msgstr ""
+
+#: functions/functions.php:76 functions/functions.php:183
+#: functions/functions.php:326 functions/functions.php:404
+msgid "Domain"
+msgstr ""
+
+#: functions/functions.php:78 functions/functions.php:177
+#: functions/functions.php:329
+msgid "This email was sent from your website"
+msgstr ""
+
+#: functions/functions.php:79 functions/functions.php:179
+#: functions/functions.php:330
+msgid "by Report Attacks plugin."
+msgstr ""
+
+#: functions/functions.php:86
+msgid "Alert: New Plugin was installed at"
+msgstr ""
+
+#: functions/functions.php:182 functions/functions.php:325
+#: functions/functions.php:403
+msgid "Ip"
+msgstr ""
+
+#: functions/functions.php:184 functions/functions.php:327
+#: functions/functions.php:405
+msgid "User"
 msgstr ""
 
 #: functions/functions.php:188
@@ -32,8 +65,168 @@ msgid ""
 "Notification Settings."
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:129
-msgid "Add your current ip to your whitelist, then click SAVE CHANGES."
+#: functions/functions.php:195
+msgid "Login Successful at"
+msgstr ""
+
+#: functions/functions.php:216
+msgid "Quantity per page"
+msgstr ""
+
+#: functions/functions.php:322
+msgid ""
+"Alert: the Report Attacks plugin was been deactivated from plugins page."
+msgstr ""
+
+#: functions/functions.php:358
+msgid "Improve system security and report login brute force attack."
+msgstr ""
+
+#: functions/functions.php:360
+msgid "Read the StartUp guide at Report Attacks Settings page."
+msgstr ""
+
+#: functions/functions.php:362
+msgid "Visit the"
+msgstr ""
+
+#: functions/functions.php:364
+msgid "plugin site"
+msgstr ""
+
+#: functions/functions.php:366
+msgid "for more details and online guide."
+msgstr ""
+
+#: functions/functions.php:369
+msgid "Overview"
+msgstr ""
+
+#: functions/functions.php:400
+msgid "This email was sent from your website "
+msgstr ""
+
+#: functions/functions.php:401
+msgid "by ReportAttacks plugin."
+msgstr ""
+
+#: functions/functions.php:409
+msgid "Failed login"
+msgstr ""
+
+#: functions/functions.php:412 functions/functions.php:685
+#: functions/functions.php:708
+msgid "You can stop emails at the Notifications Settings Tab."
+msgstr ""
+
+#: functions/functions.php:414
+msgid "Dashboard => Report Attacks => Notifications Settings."
+msgstr ""
+
+#: functions/functions.php:421
+msgid "Failed Login at"
+msgstr ""
+
+#: functions/functions.php:556
+msgid "My WordPress user email"
+msgstr ""
+
+#: functions/functions.php:615
+msgid "Only authenticated users can access API."
+msgstr ""
+
+#: functions/functions.php:633
+msgid "Report Attacks Plugin was activated!"
+msgstr ""
+
+#: functions/functions.php:636
+msgid "For details and help, take a look at Report Attacks at your left menu"
+msgstr ""
+
+#: functions/functions.php:638
+msgid "or click here"
+msgstr ""
+
+#: functions/functions.php:657
+msgid "Message from Report Attacks Plugin"
+msgstr ""
+
+#: functions/functions.php:659
+msgid "Looks like Debug mode is enabled. (WP_DEBUG is true)"
+msgstr ""
+
+#: functions/functions.php:661
+msgid ""
+"if enabled on a production website, it might cause information disclosure, "
+"allowing malicious users to view errors and additional logging information"
+msgstr ""
+
+#: functions/functions.php:663
+msgid ""
+"Please, take a look in our site, FAQ page, item => Wordpress Debug Mode or "
+"disable this message at General Settings Tab. "
+msgstr ""
+
+#: functions/functions.php:677 functions/functions.php:700
+msgid "Detected Bot on "
+msgstr ""
+
+#: functions/functions.php:678 functions/functions.php:701
+msgid "Malicious bot was detected and blocked by firewall."
+msgstr ""
+
+#: functions/functions.php:681 functions/functions.php:704
+msgid "Robot IP Address"
+msgstr ""
+
+#: functions/functions.php:682
+msgid "Malicious String Found:"
+msgstr ""
+
+#: functions/functions.php:684 functions/functions.php:707
+msgid "eMail sent by Report Attacks Plugin."
+msgstr ""
+
+#: functions/functions.php:687 functions/functions.php:710
+msgid "Dashboard => Report Attacks => Settings."
+msgstr ""
+
+#: functions/functions.php:705
+msgid "Malicious User Agent Found:"
+msgstr ""
+
+#: functions/health.php:48 includes/feedback/health.php:49
+msgid "My Memory Test"
+msgstr ""
+
+#: functions/health.php:62 includes/feedback/health.php:64
+msgid "Critical"
+msgstr ""
+
+#: functions/health.php:67 includes/feedback/health.php:69
+msgid "Low WordPress Memory Limit in wp-config file"
+msgstr ""
+
+#: functions/health.php:70 includes/feedback/health.php:72
+msgid ""
+"Run your site with low memory available, can result in behaving slowly, or "
+"pages fail to load, you get random white screens of death or 500 internal "
+"server error. Basically, the more content, features and plugins you add to "
+"your site, the bigger your memory limit has to be. Increase the WP Memory "
+"Limit is a standard practice in WordPress. You can manually increase memory "
+"limit in WordPress by editing the wp-config.php file. You can find "
+"instructions in the official WordPress documentation (Increasing memory "
+"allocated to PHP). Just click the link below: "
+msgstr ""
+
+#: functions/health.php:75 includes/feedback/health.php:77
+msgid "WordPress Help Page"
+msgstr ""
+
+#: guide/guide.php:11
+msgid ""
+"Open the Request API Key page (under Report Attacks Menu) and follow the "
+"instructions to get your free API KEY."
 msgstr ""
 
 #: guide/guide.php:16
@@ -44,286 +237,91 @@ msgid ""
 "than 5 times. "
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:177
-msgid "Alert me All Successfull Login"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:188
-msgid "Alert me All Times Firewall Block Something."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:168
-msgid "Alert me by email each Failed Login"
-msgstr ""
-
-#: functions/functions.php:86
-msgid "Alert: New Plugin was installed at"
-msgstr ""
-
-#: functions/functions.php:71
-msgid "Alert: New Plugin was installed."
-msgstr ""
-
-#: functions/functions.php:322
+#: guide/guide.php:20
 msgid ""
-"Alert: the Report Attacks plugin was been deactivated from plugins page."
+"Open the Plugin General Settings Tab and click over Yes  (to begin to record "
+"failed login attempts)."
 msgstr ""
 
-#: includes/get-api-key/getapikey.php:246
-msgid "All 3 fields are required"
-msgstr ""
-
-#: guide/guide.php:37
-msgid ""
-"At eMail Settings tab, you can customize your contact email or left blank to "
-"use your wordpress eMail."
-msgstr ""
-
-#: guide/guide.php:42
-msgid ""
-"At Notification Settings Tab, you can record your option by receive or not "
-"email alerts about failed logins and Firewall Blocks."
-msgstr ""
-
-#. Author of the plugin
-msgid "Bill Minozzi"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:204
-msgid "Blocklist API KEY"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:197
-#: settings/options/plugin_options_tabbed.php:199
-msgid "Blocklist Instructions"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:209
-msgid "Blocklist Sender-Address"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:197
-#: settings/options/plugin_options_tabbed.php:199
-#: settings/options/plugin_options_tabbed.php:226
-msgid "Blocklist Settings"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:226
-msgid "Blocklist Settings and Notifications"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:219
-msgid "Blocklist User Name *"
-msgstr ""
-
-#: functions/functions.php:79 functions/functions.php:179
-#: functions/functions.php:330
-msgid "by Report Attacks plugin."
-msgstr ""
-
-#: functions/functions.php:401
-msgid "by ReportAttacks plugin."
-msgstr ""
-
-#: includes/feedback/feedback-last.php:51
-msgid "Cancel Deactivation"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:214
-msgid "Check also your spam folder."
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:88
-msgid "Check your eMail account for email from Blocklist.de"
-msgstr ""
-
-#: includes/list-tables/class-reportattacks-list-table.php:22
-msgctxt "Column label"
-msgid "date and time"
-msgstr ""
-
-#: includes/list-tables/class-reportattacks-list-table.php:23
-msgctxt "Column label"
-msgid "ip"
-msgstr ""
-
-#: includes/list-tables/class-reportattacks-list-table.php:25
-msgctxt "Column label"
-msgid "reported"
-msgstr ""
-
-#: includes/list-tables/class-reportattacks-list-table.php:24
-msgctxt "Column label"
-msgid "user"
-msgstr ""
-
-#: functions/health.php:62
-msgid "Critical"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:137
-msgid "Customized whitelist"
-msgstr ""
-
-#: functions/functions.php:414
-msgid "Dashboard => Report Attacks => Notifications Settings."
-msgstr ""
-
-#: functions/functions.php:687 functions/functions.php:710
-msgid "Dashboard => Report Attacks => Settings."
-msgstr ""
-
-#: functions/functions.php:75 functions/functions.php:181
-#: functions/functions.php:324 functions/functions.php:402
-#: functions/functions.php:680 functions/functions.php:703
-msgid "Date"
-msgstr ""
-
-#: functions/functions.php:677 functions/functions.php:700
-msgid "Detected Bot on "
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:91
-msgid "Disable file editing within the WordPress dashboard"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:55
-msgid ""
-"Disable Json WordPress Rest API (also new WordPress 4.7 Rest API). Take a "
-"look our faq page (at our site) for details."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:45
-msgid ""
-"Disable xml-rpc API. Take a look our faq page (at our site) for details."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:159
-msgid "Do you want receive email alerts for each login attempt?"
-msgstr ""
-
-#: functions/functions.php:76 functions/functions.php:183
-#: functions/functions.php:326 functions/functions.php:404
-msgid "Domain"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:151
-#: settings/options/plugin_options_tabbed.php:156
-#: settings/options/plugin_options_tabbed.php:158
-#: settings/options/plugin_options_tabbed.php:196
-msgid "email"
-msgstr ""
-
-#: functions/functions.php:684 functions/functions.php:707
-msgid "eMail sent by Report Attacks Plugin."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:151
-#: settings/options/plugin_options_tabbed.php:158
-msgid "Email Settings"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:114
-#: includes/get-api-key/getapikey.php:120
-msgid "Empty eMail. Please fill out eMail field"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:135
-#: includes/get-api-key/getapikey.php:142
-msgid "Empty Username. Please, fill out username field"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:104
-msgid "Enable dashboard warning message when Debug is true"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:115
-msgid ""
-"Enable Firewall? (Block Malicious Requests, Queries, User Agents and URLS. "
-"100% Plug-n-play, no configuration required.)"
-msgstr ""
-
-#: functions/functions.php:409
-msgid "Failed login"
-msgstr ""
-
-#: functions/functions.php:421
-msgid "Failed Login at"
-msgstr ""
-
-#. $parent_slug
-#. string $page_title
-#: functions/functions.php:202 functions/functions.php:203
-msgid "Failed Logins Table"
-msgstr ""
-
-#: guide/guide.php:59
-msgid "FAQ Page"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:146
-msgid ""
-"Fill out the email address to send messages. Left Blank to use your default "
-"Wordpress email."
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:209
-msgid "Fill Out this form to Get your free Blocklist API KEY"
-msgstr ""
-
-#: functions/functions.php:636
-msgid "For details and help, take a look at Report Attacks at your left menu"
-msgstr ""
-
-#: functions/functions.php:366
-msgid "for more details and online guide."
+#: guide/guide.php:22
+msgid "We suggest check Yes for all."
 msgstr ""
 
 #: guide/guide.php:24
 msgid "For more details, please, visit our FAQ page)."
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:13
-#: settings/options/plugin_options_tabbed.php:127
-msgid "General Settings"
+#: guide/guide.php:30
+msgid "Important: Add your's  IP address to MY IP White List."
 msgstr ""
 
-#: includes/feedback/feedback.php:52
+#: guide/guide.php:37
 msgid ""
-"Hi, my name is Bill Minozzi, and I am developer of plugin Report Attacks."
+"5) At eMail Settings tab, you can customize your contact email or left blank "
+"to use your wordpress eMail."
 msgstr ""
 
-#: includes/feedback/feedback-last.php:39
+#: guide/guide.php:42
 msgid ""
-"Hi, my name is Bill Minozzi, and I am developer of plugin ReportAttacks."
+"6) At Notification Settings Tab, you can record your option by receive or "
+"not email alerts about failed logins and Firewall Blocks."
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:36
-msgid "Hides all the site (included the login page) to reported IP's?"
+#: guide/guide.php:47
+msgid "Remember to click Save Changes before to left each tab."
 msgstr ""
 
-#. URI of the plugin
-#. Author URI of the plugin
-msgid "http://reportattacks.com"
+#: guide/guide.php:52
+msgid "To manage the failed login's table, go to Failed Logins Table"
 msgstr ""
 
-#: includes/get-api-key/getapikey.php:241
-msgid "I read and agree with the terms of service (below) of Blocklist.de"
+#: guide/guide.php:57
+msgid "OnLine Guide"
 msgstr ""
 
-#: functions/functions.php:661
+#: guide/guide.php:59
+msgid "FAQ Page"
+msgstr ""
+
+#: guide/guide.php:61
+msgid "Support Page"
+msgstr ""
+
+#: guide/guide.php:68
+msgid "That is all."
+msgstr ""
+
+#: guide/guide.php:71
 msgid ""
-"if enabled on a production website, it might cause information disclosure, "
-"allowing malicious users to view errors and additional logging information"
+"We hope our plugin makes the Internet better, safer and helps to clean "
+"infected PCs."
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:131
-msgid "If necessary add more than one, use only one ip by line."
+#: includes/feedback/activated-manager.php:124
+msgid "Hi, my name is Bill Minozzi, and I am developer of"
+msgstr ""
+
+#: includes/feedback/activated-manager.php:133
+#: includes/feedback/feedback-last.php:43
+msgid "Thank You!"
+msgstr ""
+
+#: includes/feedback/activated-manager.php:136
+msgid "Yes, Submit"
+msgstr ""
+
+#: includes/feedback/activated-manager.php:138
+msgid "Skip"
 msgstr ""
 
 #: includes/feedback/feedback-last.php:38
 msgid ""
 "If you have a moment, Please, let us know you and why you are deactivating."
+msgstr ""
+
+#: includes/feedback/feedback-last.php:39
+msgid ""
+"Hi, my name is Bill Minozzi, and I am developer of plugin ReportAttacks."
 msgstr ""
 
 #: includes/feedback/feedback-last.php:41
@@ -332,96 +330,236 @@ msgid ""
 "support by email to you."
 msgstr ""
 
+#: includes/feedback/feedback-last.php:45
+msgid "type here yours sugestions ..."
+msgstr ""
+
+#: includes/feedback/feedback-last.php:47
+msgid "(In this case, we are unable to email you)"
+msgstr ""
+
+#: includes/feedback/feedback-last.php:49
+msgid "Yes, Submit and Deactivate"
+msgstr ""
+
+#: includes/feedback/feedback-last.php:51
+msgid "Cancel Deactivation"
+msgstr ""
+
+#: includes/feedback/feedback-last.php:52
+msgid "No, Just Deactivate it"
+msgstr ""
+
+#: includes/feedback/feedback.php:52
+msgid ""
+"Hi, my name is Bill Minozzi, and I am developer of plugin Report Attacks."
+msgstr ""
+
 #: includes/feedback/feedback.php:54
 msgid ""
 "If you like this plugin, please write a few words about it. It will help "
 "other people find this useful plugin more quickly."
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:161
-msgid "If you under bruteforce attack, you will receive a lot of emails."
+#: includes/feedback/feedback.php:56
+msgid "Thank you!"
 msgstr ""
 
-#: guide/guide.php:30
-msgid "Important: Add your's  IP address to MY IP White List."
+#: includes/feedback/feedback.php:60
+msgid "Rate or Share"
 msgstr ""
 
-#: functions/functions.php:358
-msgid "Improve system security and report login brute force attack."
+#: includes/feedback/feedback.php:61
+msgid "No, dismiss"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:13
-msgid "Instructions"
+#: includes/feedback/feedback.php:62
+msgid "or"
+msgstr ""
+
+#: includes/feedback/feedback.php:63
+msgid "Remind me later"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:45
+msgid "Registration fail. Please, try again. Error:  "
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:88
+msgid "Check your eMail account for email from Blocklist.de"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:90
+msgid "Registration fail. Please, try again"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:104
+msgid "You need fill out all fields and accept the Blocklist Terms of Service"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:114
+#: includes/get-api-key/getapikey.php:120
+msgid "Empty eMail. Please fill out eMail field"
 msgstr ""
 
 #: includes/get-api-key/getapikey.php:124
 msgid "Invalid eMail"
 msgstr ""
 
-#: includes/get-api-key/getapikey.php:154
+#: includes/get-api-key/getapikey.php:135
+#: includes/get-api-key/getapikey.php:142
+msgid "Empty Username. Please, fill out username field"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:147
+msgid "Username size need be between 5 and 20"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:155
 msgid ""
 "Invalid Username. You can use only normal characters - A to Z - (also "
 "numbers and underscore) of the English alphabet"
 msgstr ""
 
-#: functions/functions.php:182 functions/functions.php:325
-#: functions/functions.php:403
-msgid "Ip"
+#: includes/get-api-key/getapikey.php:210
+msgid "Fill Out this form to Get your free Blocklist API KEY"
 msgstr ""
 
-#: includes/list-tables/class-reportattacks-list-table.php:73
-msgctxt "List table bulk action"
-msgid "Delete"
+#: includes/get-api-key/getapikey.php:213
+msgid "Request once, then check your eMail account for email from Blocklist.de"
 msgstr ""
 
-#: functions/functions.php:195
-msgid "Login Successful at"
+#: includes/get-api-key/getapikey.php:215
+msgid "Check also your spam folder."
 msgstr ""
 
-#: functions/functions.php:659
-msgid "Looks like Debug mode is enabled. (WP_DEBUG is true)"
+#: includes/get-api-key/getapikey.php:220
+msgid "Blocklist User Name *"
 msgstr ""
 
-#: functions/health.php:67
-msgid "Low WordPress Memory Limit in wp-config file"
+#: includes/get-api-key/getapikey.php:221
+msgid "Type here your username"
 msgstr ""
 
-#: functions/functions.php:678 functions/functions.php:701
-msgid "Malicious bot was detected and blocked by firewall."
+#: includes/get-api-key/getapikey.php:224
+msgid ""
+"To create your user name, you can use only normal characters - A to Z - "
+"(also numbers and underscore) of the English alphabet."
 msgstr ""
 
-#: functions/functions.php:682
-msgid "Malicious String Found:"
-msgstr ""
-
-#: functions/functions.php:705
-msgid "Malicious User Agent Found:"
-msgstr ""
-
-#: functions/functions.php:657
-msgid "Message from Report Attacks Plugin"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:225
+#: includes/get-api-key/getapikey.php:226
 msgid "Min size 5 max 20"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:137
-#: settings/options/plugin_options_tabbed.php:142
-#: settings/options/plugin_options_tabbed.php:144
-msgid "My IP White List"
+#: includes/get-api-key/getapikey.php:231
+msgid "Your eMail *"
 msgstr ""
 
-#: functions/health.php:48
-msgid "My Memory Test"
+#: includes/get-api-key/getapikey.php:232
+msgid "Type here your email"
 msgstr ""
 
-#: functions/functions.php:556
-msgid "My WordPress user email"
+#: includes/get-api-key/getapikey.php:236
+msgid ""
+"Valid email address where you will receive your API KEY from Blocklist.de"
 msgstr ""
 
-#: functions/functions.php:73
-msgid "New Plugin Name"
+#: includes/get-api-key/getapikey.php:242
+msgid "I read and agree with the terms of service (below) of Blocklist.de"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:247
+msgid "All 3 fields are required"
+msgstr ""
+
+#: includes/get-api-key/getapikey.php:262
+msgid ""
+"You can also request your free API KEY at: https://www.blocklist.de/en/"
+"register.html"
+msgstr ""
+
+#: includes/list-tables/class-reportattacks-list-table.php:22
+msgid "date and time"
+msgstr ""
+
+#: includes/list-tables/class-reportattacks-list-table.php:23
+msgid "ip"
+msgstr ""
+
+#: includes/list-tables/class-reportattacks-list-table.php:24
+msgid "user"
+msgstr ""
+
+#: includes/list-tables/class-reportattacks-list-table.php:25
+msgid "reported"
+msgstr ""
+
+#: includes/list-tables/class-reportattacks-list-table.php:73
+msgid "Delete"
+msgstr ""
+
+#: reportattacks.php:57
+msgid ""
+"Report Attacks Plugin: Could not load the localization file (Language file)"
+msgstr ""
+
+#: reportattacks.php:59
+msgid "Please, take a look in our site, Online Guide, item => Plugin Language"
+msgstr ""
+
+#: reportattacks.php:223
+msgid "Wrong Username or Password"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:9
+msgid "You need only check yes or no below."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:11
+msgid "Then click SAVE CHANGES."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:13
+msgid "Instructions"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:18
+msgid "Record all failed login not included at IP White List?"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:20
+#: settings/options/plugin_options_tabbed.php:29
+#: settings/options/plugin_options_tabbed.php:38
+msgid "yes"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:21
+#: settings/options/plugin_options_tabbed.php:30
+#: settings/options/plugin_options_tabbed.php:39
+msgid "no"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:27
+msgid ""
+"Add extra login protection when ip is not withelisted? (Will request your "
+"WordPress email at login)"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:36
+msgid "Hides all the site (included the login page) to reported IP's?"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:45
+msgid ""
+"Disable xml-rpc API. Take a look our faq page (at our site) for details."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:47
+msgid "Yes, disable All"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:48
+msgid "Yes, disable only Ping Back"
 msgstr ""
 
 #: settings/options/plugin_options_tabbed.php:49
@@ -436,276 +574,18 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:21
-#: settings/options/plugin_options_tabbed.php:30
-#: settings/options/plugin_options_tabbed.php:39
-msgid "no"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:180
-msgid "No, Alert me Only Not White listed"
-msgstr ""
-
-#: includes/feedback/feedback.php:61
-msgid "No, dismiss"
-msgstr ""
-
-#: includes/feedback/feedback-last.php:52
-msgid "No, Just Deactivate it"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:171
-#: settings/options/plugin_options_tabbed.php:217
-msgid "No."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:163
-msgid "Notifications"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:163
-#: settings/options/plugin_options_tabbed.php:196
-msgid "Notifications Settings"
-msgstr ""
-
-#: guide/guide.php:57
-msgid "OnLine Guide"
-msgstr ""
-
-#: guide/guide.php:20
+#: settings/options/plugin_options_tabbed.php:55
 msgid ""
-"Open the Plugin General Settings Tab and click over Yes  (to begin to record "
-"failed login attempts)."
+"Disable Json WordPress Rest API (also new WordPress 4.7 Rest API). Take a "
+"look our faq page (at our site) for details."
 msgstr ""
 
-#: guide/guide.php:11
-msgid ""
-"Open the Request API Key page (under Report Attacks Menu) and follow the "
-"instructions to get your free API KEY."
-msgstr ""
-
-#: includes/feedback/feedback.php:62
-msgid "or"
-msgstr ""
-
-#: functions/functions.php:638
-msgid "or click here"
-msgstr ""
-
-#: functions/functions.php:369
-msgid "Overview"
-msgstr ""
-
-#: functions/functions.php:663
-msgid ""
-"Please, take a look in our site, FAQ page, item => Wordpress Debug Mode or "
-"disable this message at General Settings Tab. "
-msgstr ""
-
-#: reportattacks.php:62
-msgid "Please, take a look in our site, Online Guide, item => Plugin Language"
-msgstr ""
-
-#: functions/functions.php:364
-msgid "plugin site"
-msgstr ""
-
-#: functions/functions.php:216
-msgid "Quantity per page"
-msgstr ""
-
-#: includes/feedback/feedback.php:60
-msgid "Rate or Share"
-msgstr ""
-
-#: functions/functions.php:360
-msgid "Read the StartUp guide at Report Attacks Settings page."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:18
-msgid "Record all failed login not included at IP White List?"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:90
-msgid "Registration fail. Please, try again"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:45
-msgid "Registration fail. Please, try again. Error:  "
-msgstr ""
-
-#: guide/guide.php:47
-msgid "Remember to click Save Changes before to left each tab."
-msgstr ""
-
-#: includes/feedback/feedback.php:63
-msgid "Remind me later"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:214
-msgid "Report Attacks (failed logins) to Blocklist.de ?"
-msgstr ""
-
-#: functions/functions.php:633
-msgid "Report Attacks Plugin was activated!"
-msgstr ""
-
-#: reportattacks.php:60
-msgid ""
-"Report Attacks Plugin: Could not load the localization file (Language file)"
-msgstr ""
-
-#. Description of the plugin
-msgid ""
-"Report login brute force attacks and improve login security. Firewall "
-"Included."
-msgstr ""
-
-#. Name of the plugin
-msgid "reportattacks"
-msgstr ""
-
-#. $parent_slug
-#. string $page_title
-#: includes/get-api-key/getapikey.php:10 includes/get-api-key/getapikey.php:11
-msgid "Request API Key"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:212
-msgid "Request once, then check your eMail account for email from Blocklist.de"
-msgstr ""
-
-#: functions/functions.php:681 functions/functions.php:704
-msgid "Robot IP Address"
-msgstr ""
-
-#: functions/health.php:70
-msgid ""
-"Run your site with low memory available, can result in behaving slowly, or "
-"pages fail to load, you get random white screens of death or 500 internal "
-"server error. Basically, the more content, features and plugins you add to "
-"your site, the bigger your memory limit has to be. Increase the WP Memory "
-"Limit is a standard practice in WordPress. You can manually increase memory "
-"limit in WordPress by editing the wp-config.php file. You can find "
-"instructions in the official WordPress documentation (Increasing memory "
-"allocated to PHP). Just click the link below: "
+#: settings/options/plugin_options_tabbed.php:57
+msgid "Yes, disable"
 msgstr ""
 
 #: settings/options/plugin_options_tabbed.php:64
 msgid "Sets WordPress to automatically download and install plugin updates."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:73
-msgid "Sets WordPress to automatically download and install themes updates."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:82
-msgid ""
-"Sets WordPress to replace the login error message to Wrong Username or "
-"Password"
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:5
-#: settings/options/plugin_options_tabbed.php:7
-#: settings/options/plugin_options_tabbed.php:7
-msgid "Startup Guide"
-msgstr ""
-
-#: guide/guide.php:61
-msgid "Support Page"
-msgstr ""
-
-#: includes/feedback/feedback-last.php:43
-msgid "Thank You!"
-msgstr ""
-
-#: includes/feedback/feedback.php:56
-msgid "Thank you!"
-msgstr ""
-
-#: guide/guide.php:68
-msgid "That is all."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:11
-msgid "Then click SAVE CHANGES."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:150
-msgid "Then, click save changes."
-msgstr ""
-
-#: functions/functions.php:78 functions/functions.php:177
-#: functions/functions.php:329
-msgid "This email was sent from your website"
-msgstr ""
-
-#: functions/functions.php:400
-msgid "This email was sent from your website "
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:223
-msgid ""
-"To create your user name, you can use only normal characters - A to Z - "
-"(also numbers and underscore) of the English alphabet."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:198
-msgid ""
-"To get your free Blocklist API Key, go to Request API Key page under the "
-"Repport Attacks menu and follow the instructions there."
-msgstr ""
-
-#: guide/guide.php:52
-msgid "To manage the failed login's table, go to Failed Logins Table"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:231
-msgid "Type here your email"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:220
-msgid "Type here your username"
-msgstr ""
-
-#: includes/feedback/feedback-last.php:45
-msgid "type here yours sugestions ..."
-msgstr ""
-
-#: functions/functions.php:184 functions/functions.php:327
-#: functions/functions.php:405
-msgid "User"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:147
-msgid "Username size need be between 5 and 20"
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:235
-msgid ""
-"Valid email address where you will receive your API KEY from Blocklist.de"
-msgstr ""
-
-#: functions/functions.php:362
-msgid "Visit the"
-msgstr ""
-
-#: guide/guide.php:71
-msgid ""
-"We hope our plugin makes the Internet better, safer and helps to clean "
-"infected PCs."
-msgstr ""
-
-#: guide/guide.php:22
-msgid "We suggest check Yes for all."
-msgstr ""
-
-#: functions/health.php:75
-msgid "WordPress Help Page"
-msgstr ""
-
-#: reportattacks.php:228
-msgid "Wrong Username or Password"
 msgstr ""
 
 #: settings/options/plugin_options_tabbed.php:66
@@ -718,30 +598,70 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:20
-#: settings/options/plugin_options_tabbed.php:29
-#: settings/options/plugin_options_tabbed.php:38
-msgid "yes"
+#: settings/options/plugin_options_tabbed.php:73
+msgid "Sets WordPress to automatically download and install themes updates."
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:179
-msgid "Yes, All"
+#: settings/options/plugin_options_tabbed.php:82
+msgid ""
+"Sets WordPress to replace the login error message to Wrong Username or "
+"Password"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:57
-msgid "Yes, disable"
+#: settings/options/plugin_options_tabbed.php:91
+msgid "Disable file editing within the WordPress dashboard"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:47
-msgid "Yes, disable All"
+#: settings/options/plugin_options_tabbed.php:104
+msgid "Enable dashboard warning message when Debug is true"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:48
-msgid "Yes, disable only Ping Back"
+#: settings/options/plugin_options_tabbed.php:115
+msgid ""
+"Enable Firewall? (Block Malicious Requests, Queries, User Agents and URLS. "
+"100% Plug-n-play, no configuration required.)"
 msgstr ""
 
-#: includes/feedback/feedback-last.php:49
-msgid "Yes, Submit and Deactivate"
+#: settings/options/plugin_options_tabbed.php:129
+msgid "Add your current ip to your whitelist, then click SAVE CHANGES."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:131
+msgid "If necessary add more than one, use only one ip by line."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:134
+msgid "Your current ip is: "
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:137
+msgid "Customized whitelist"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:142
+msgid "My IP White List"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:146
+msgid ""
+"Fill out the email address to send messages. Left Blank to use your default "
+"Wordpress email."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:150
+msgid "Then, click save changes."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:159
+msgid "Do you want receive email alerts for each login attempt?"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:161
+msgid "If you under bruteforce attack, you will receive a lot of emails."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:168
+msgid "Alert me by email each Failed Login"
 msgstr ""
 
 #: settings/options/plugin_options_tabbed.php:170
@@ -749,29 +669,46 @@ msgstr ""
 msgid "Yes."
 msgstr ""
 
-#: includes/get-api-key/getapikey.php:261
+#: settings/options/plugin_options_tabbed.php:171
+#: settings/options/plugin_options_tabbed.php:217
+msgid "No."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:177
+msgid "Alert me All Successfull Login"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:179
+msgid "Yes, All"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:180
+msgid "No, Alert me Only Not White listed"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:188
+msgid "Alert me All Times Firewall Block Something."
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:197
+#: settings/options/plugin_options_tabbed.php:199
+msgid "Blocklist Instructions"
+msgstr ""
+
+#: settings/options/plugin_options_tabbed.php:198
 msgid ""
-"You can also request your free API KEY at: https://www.blocklist."
-"de/en/register.html"
+"To get your free Blocklist API Key, go to Request API Key page under the "
+"Repport Attacks menu and follow the instructions there."
 msgstr ""
 
-#: functions/functions.php:412 functions/functions.php:685
-#: functions/functions.php:708
-msgid "You can stop emails at the Notifications Settings Tab."
+#: settings/options/plugin_options_tabbed.php:204
+msgid "Blocklist API KEY"
 msgstr ""
 
-#: includes/get-api-key/getapikey.php:104
-msgid "You need fill out all fields and accept the Blocklist Terms of Service"
+#: settings/options/plugin_options_tabbed.php:209
+msgid "Blocklist Sender-Address"
 msgstr ""
 
-#: settings/options/plugin_options_tabbed.php:9
-msgid "You need only check yes or no below."
-msgstr ""
-
-#: settings/options/plugin_options_tabbed.php:134
-msgid "Your current ip is: "
-msgstr ""
-
-#: includes/get-api-key/getapikey.php:230
-msgid "Your eMail *"
+#: settings/options/plugin_options_tabbed.php:214
+msgid "Report Attacks (failed logins) to Blocklist.de ?"
 msgstr ""
